@@ -1,5 +1,6 @@
 //document.getElementById("encripted-message").style.display = "none";
-let textareaEnc = document.getElementById("encripted-message");
+//let textareaEnc = document.getElementById("encripted-message");
+let err1 = document.getElementById('err1')
 
 let arrLetras = ['a','e','i', 'o', 'u']
 let arrReglas = ['ai','enter','imes', 'ober', 'ufat' ]
@@ -39,7 +40,7 @@ function encript(){
         //console.log(encriptedMsj.join(''))
     //textareaEnc.style.display = "inline";
     finalMsj = encriptedMsj.join('')
-    textareaEnc.innerHTML = finalMsj;
+    document.getElementById("encripted-message").value = finalMsj;
 }
 
 function desencript(){
@@ -52,7 +53,7 @@ function desencript(){
             //console.log(desen)
             desen = desen.replaceAll(arrReglas[x], arrLetras[x])
             console.log("al final"+desen)
-            textareaEnc.value = desen;
+            document.getElementById("encripted-message").value = desen;
         }
         else if(desen.search(arrReglas[x])== -1){
             suma = suma + 1;
@@ -87,19 +88,33 @@ function check(e){
         imprime = patron.test(tecla_final);
         if(!imprime){
             if(tecla >= 65 && tecla <= 90){
-                console.log("tecla dentro del if"+tecla)
-                document.getElementById("error").innerHTML = "Error no se admiten mayúsculas";
+                //console.log("tecla dentro del if"+tecla)
+                err1.style.display = "inline-flex";
+                document.getElementById("error").innerHTML = 'Oops! No se admiten <b>mayúsculas</b><button class="close" onclick="cerrar()">X</button>';
             }
             else if(tecla >= 48 && tecla <= 57){
-                console.log("tecla dentro del if"+tecla)
-                document.getElementById("error").innerHTML = "Error no se números";
+                //console.log("tecla dentro del if"+tecla)
+                err1.style.display = "inline-flex";
+                document.getElementById("error").innerHTML = 'Oops! No se admiten <b>números</b><button class="close" onclick="cerrar()">X</button>';
             }
             else{
-                document.getElementById("error").innerHTML = "Error no se admiten acentos ni caracteres especiales";
-                console.log("no se admiten caracteres especiales")
+                err1.style.display = "inline-flex";
+                document.getElementById("error").innerHTML = 'Oops! No se admiten <b>acentos</b> ni <b>caracteres especiales</b><button class="close" onclick="cerrar()">X</button>';
+                //console.log("no se admiten caracteres especiales")
             }
         }
         return imprime;
 }
 
-
+function hide(){
+    let hideCont = document.getElementById("orginal-message")
+    hideCont.setAttribute('type','password')
+}
+function show(){
+    let hideCont = document.getElementById("orginal-message")
+    hideCont.setAttribute('type','text')
+}
+function cerrar(){
+    console.log("entro a close");
+    err1.style.display = "none";
+}

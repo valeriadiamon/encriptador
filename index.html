@@ -7,19 +7,29 @@
     <title>Encriptador</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <img class="logo" src="img/Vector.png" alt="Logo de la letra a de Alura">
-    <p id="error"></p>
-    <p id="error2"></p>
+
+    <span id="err1"">
+        <p id="error"></p>
+        
+    </span>
+    <div >
+        <!--<p ></p>-->
+        <button class="close" onclick="cerrar()"><b>X</b></button>
+    </div>
+    
     <textarea class="orginal-message" name="orginal-message" id="orginal-message" cols="30" rows="10" placeholder="Ingresa aquí el texto" onkeypress="return check(event)"></textarea>
-    <p class="info"> <b class="sign">!</b> Solo letras minúsculas y sin acentos</p>
+    <p class="info"> <b class="sign">!</b> <b>Solo letras minúsculas y sin acentos</b></p>
+    <button class="hide" onclick="hide()">Ocultar mensaje</button>
+    <button class="show" onclick="show()">Mostrar mensaje</button>
     <button class="button" onclick="encript()">Encriptar</button>
     <button class="button" onclick="desencript()">Desencriptar</button>
     <div class="card">
-        <textarea name="encripted-message" id="encripted-message" class="encripted-message" cols="30" rows="10"></textarea>
+        <textarea type="password" name="encripted-message" id="encripted-message" class="encripted-message" cols="30" rows="10"></textarea>
         <div>
             <img src="img/Muñeco.png" alt="Gráfico de persona incada con una lupa viendo un diamante">
             <p>Ningún mensaje fue encontrado</p>
