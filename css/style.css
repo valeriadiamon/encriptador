@@ -116,3 +116,9 @@ footer{
         margin-left: 12rem;
     }
 }
+@media (max-height: 700px) {
+    footer{
+        position: relative;
+        margin-top: 2rem;
+    }
+}  
