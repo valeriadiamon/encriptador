@@ -11,33 +11,40 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <img class="logo" src="img/Vector.png" alt="Logo de la letra a de Alura">
-
-    <span id="err1"">
-        <p id="error"></p>
-        
-    </span>
-    <div >
-        <!--<p ></p>-->
-        <button class="close" onclick="cerrar()"><b>X</b></button>
-    </div>
+    <header>
+        <img class="logo" src="img/Vector.png" alt="Logo de la letra a de Alura">
+    </header>
     
-    <textarea class="orginal-message" name="orginal-message" id="orginal-message" cols="30" rows="10" placeholder="Ingresa aquí el texto" onkeypress="return check(event)"></textarea>
-    <p class="info"> <b class="sign">!</b> <b>Solo letras minúsculas y sin acentos</b></p>
-    <button class="hide" onclick="hide()">Ocultar mensaje</button>
-    <button class="show" onclick="show()">Mostrar mensaje</button>
-    <button class="button" onclick="encript()">Encriptar</button>
-    <button class="button" onclick="desencript()">Desencriptar</button>
-    <div class="card">
-        <textarea type="password" name="encripted-message" id="encripted-message" class="encripted-message" cols="30" rows="10"></textarea>
-        <div>
-            <img src="img/Muñeco.png" alt="Gráfico de persona incada con una lupa viendo un diamante">
-            <p>Ningún mensaje fue encontrado</p>
+    
+    
+    <main>
+        <span>
+            <div class="alert">
+                <p id="error"></p>    
+            </div>
+            <textarea class="orginal-message" name="orginal-message" id="orginal-message" cols="30" rows="10" placeholder="Ingresa aquí el texto" onkeypress="return check(event)"></textarea>
+            <p class="info"> <b class="sign">!</b> <b>Solo letras minúsculas, sin acentos.</b></p>
+        </span>
+        <span class="cols">
+            <button class="button" onclick="encript()" style="margin-bottom: 1rem;">Encriptar ➜</button>
+            <button class="button" onclick="desencript()">Desencriptar ➜</button>
+        </span>
+        <span class="card">
+            <div class="alert">
+            <p id="error2"></p>    
+        </div>
+        <textarea type="password" name="encripted-message" id="encripted-message" class="encripted-message" cols="30" rows="10" readonly></textarea>
+        <div id="sin-mensaje">
+            <img class="search-message" src="img/Muñeco.png" alt="Gráfico de persona incada con una lupa viendo un diamante">
+            <p class="subtitle"> <b>Ningún mensaje fue encontrado</b> </p>
             <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
         </div>
-        
-
-    </div>
+        <div class="botones">
+            <button class="copiar" onclick="copiar()">Copiar</button>
+            <button onclick="limpiar()">Limpiar</button>
+        </div>
+    </span>
+</main>
     <footer>Desarrollado por Valeria Díaz</footer>
     <script src="js/main.js"></script>
 </body>

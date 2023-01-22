@@ -1,42 +1,33 @@
+*{
+    font-family: 'Merriweather', serif;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 html{
     background-color: #B5D0FF;
     /*background-color: #D89FFF;*/
-    font-family: 'Merriweather', serif;
 }
-/*#0D3973
- ailenterximess fenterlimesz mentersimesventerrsairimesober tenter aimober mufatchober graicimesais poberr enterstenter henterrmobersober dimesai y poberr senterr mimes menterjoberr aimimesgober y mimes fenterlimescimesdaid
- */
+/*#0D3973*/
 /*#08628A#4E7FBF*/
-.orginal-message{
-    /*border-radius: 1rem;*/
+.orginal-message, .encripted-message{
+    padding: 1rem;
     font-family: 'Merriweather', serif;
     font-weight: bold;
     font-size: 1.5rem;
     color: #0D3973;
     background-color: rgba(255, 255, 255, 0.9);
-    border: 0px solid #919191;  
-	background: #ffffff; /* Fondo */
-	border-radius: 6px;  /* Bordes redondos */
+    border: 0px;  
+	background: #ffffff; 
+	border-radius: 6px;  
 	box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -3px -3px 4px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
-	text-shadow: 5px 5px 5px rgba(255,255,255,.9);  /* Sombra del texto */
-    width: 50%;
-    height: 10rem;
-    /*max-height: 50%;*/
+	text-shadow: 5px 5px 5px rgba(255,255,255,.9);  
+    resize: none;
+    height: 25rem;
 }
 .orginal-message::placeholder{
     color: #627c9e;
     
-}
-.encripted-message{
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
-    color: #0D3973;
-    background-color: rgba(255, 255, 255, 0.9);
-    border: 1px solid #919191; /* Color del borde, debe ser más oscuro que fondo */
-	background: #ffffff; /* Fondo */
-	border-radius: 6px;  /* Bordes redondos */
-	box-shadow: inset 3px 3px 3px rgba(255,255,255,.7), inset -2px -2px 3px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
-	text-shadow: 1px 1px 1px rgba(255,255,255,.9);
 }
 .sign{
     color: white;
@@ -45,10 +36,54 @@ html{
     border-radius: 100%;
 }
 .alert{
-    background-color: red;
-    padding: 0.5rem 1rem;
-    
+    height: 2rem;
+    color: rgb(138, 13, 13);
 }
-#err1{
-    display:inline-flex;
+
+main{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+.botones{
+    margin-top: 5rem;
+    margin-left: 5rem;
+}
+button{
+    /*padding: 0.75rem 1rem;*/
+    width: 10rem;
+    height: 2.5rem;
+    border: 0px;
+    background-color: rgb(119, 147, 183);
+    color: white;
+    font-weight: 400;
+    font-size: 1rem;
+    box-shadow: inset 3px 3px 3px rgba(176, 196, 221, 0.7), inset -3px -3px 4px rgba(0,0,0,.1), 2px 2px 10px rgba(0,0,0,.1);
+}
+#sin-mensaje{
+    /*position: absolute;*/
+    margin: -23rem 10% 0 10%;
+    z-index: 10;
+    top: 0;
+    text-align: center;
+}
+.search-message{
+    width: 70%;
+}
+.subtitle{
+    font-size: 1.5rem;
+}
+.cols{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    width: 100vw;
+    background-color: #0D3973;
+    position: absolute;
+    color: white;
+    bottom: 0px;
+    padding: 0.5rem;
 }
