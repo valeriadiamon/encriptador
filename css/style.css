@@ -27,7 +27,6 @@ html{
 }
 .orginal-message::placeholder{
     color: #627c9e;
-    
 }
 .sign{
     color: white;
@@ -46,8 +45,10 @@ main{
     justify-content: space-around;
 }
 .botones{
-    margin-top: 4rem;
-    margin-left: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-left: 5rem;*/
 }
 button{
     /*padding: 0.75rem 1rem;*/
@@ -62,7 +63,7 @@ button{
 }
 #sin-mensaje{
     /*position: absolute;*/
-    margin: -23rem 10% 0 10%;
+    margin: -23rem 10% 4rem 10%;
     z-index: 10;
     top: 0;
     text-align: center;
@@ -72,12 +73,7 @@ button{
 }
 .subtitle{
     font-size: 1.5rem;
-}
-.cols{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
 }
 footer{
     width: 100vw;
@@ -109,16 +105,25 @@ footer{
         top: 0;
         text-align: center;
     }
-    .botones{
-        margin-left: 12rem;
-    }
-    .botones2{
-        margin-left: 12rem;
+    .btn2{
+        margin-top: 5rem;
     }
 }
 @media (max-height: 700px) {
     footer{
         position: relative;
         margin-top: 2rem;
+    }
+}
+@media(max-width: 768px){
+    .orginal-message, .encripted-message{
+        width: 100vw;
+        height: 25vh;
+    }
+    #sin-mensaje{
+        margin: -8rem 10% 0 10%;
+    }
+    .btn2{
+        margin-top: 3rem;
     }
 }  
